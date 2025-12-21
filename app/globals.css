@@ -124,3 +124,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Game animations */
+@keyframes run {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes stumble {
+  0% { transform: rotate(0deg) translateX(0); }
+  20% { transform: rotate(-15deg) translateX(-5px); }
+  40% { transform: rotate(10deg) translateX(5px); }
+  60% { transform: rotate(-10deg) translateX(-3px); }
+  80% { transform: rotate(5deg) translateX(3px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+
+@keyframes speedUp {
+  0% { transform: scale(1) translateX(0); }
+  50% { transform: scale(1.15) translateX(15px); }
+  100% { transform: scale(1) translateX(0); }
+}
+
+.animate-run {
+  animation: run 0.3s ease-in-out infinite;
+}
+
+.animate-stumble {
+  animation: stumble 0.6s ease-in-out;
+}
+
+.animate-speed {
+  animation: speedUp 0.4s ease-out;
+}
